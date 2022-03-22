@@ -11,3 +11,4 @@
 ### Accuracy result:
 - DAN : 19.53
 - DeepFace: 28.95
+- CNN : 36.94

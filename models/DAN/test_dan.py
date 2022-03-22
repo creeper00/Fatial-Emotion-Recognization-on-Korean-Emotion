@@ -56,9 +56,9 @@ if __name__ == "__main__":
     total=0
     correct=0
     for i in emo:
-        filenames = next(walk(f'../../datasets/{i}/'), (None, None, []))[2]
+        filenames = next(walk(f'./datasets/{i}/'), (None, None, []))[2]
         for j in filenames:
-            image = f"../../datasets/{i}/{j}"
+            image = f"./datasets/{i}/{j}"
 
             index, label = model.fit(image)
             if label==i : correct+=1

@@ -24,7 +24,7 @@ class Model():
                                     transforms.Normalize(mean=[0.485, 0.456, 0.406],
                                     std=[0.229, 0.224, 0.225])
                                 ])
-        self.labels = ['neutral', 'happy', 'sad', 'surprise', 'fear','anger', 'contempt']
+        self.labels = ['neutral', 'happy', 'sad', 'surprise', 'fear', 'disgust', 'anger']
 
         self.model = DAN(num_head=4, num_class=7, pretrained=False)
         checkpoint = torch.load('./affecnet7_epoch6_acc0.6569.pth',
@@ -56,9 +56,9 @@ if __name__ == "__main__":
     total=0
     correct=0
     for i in emo:
-        filenames = next(walk(f'./datasets/{i}/'), (None, None, []))[2]
+        filenames = next(walk(f'../../datasets/{i}/'), (None, None, []))[2]
         for j in filenames:
-            image = f"./datasets/{i}/{j}"
+            image = f"../../datasets/{i}/{j}"
 
             index, label = model.fit(image)
             if label==i : correct+=1

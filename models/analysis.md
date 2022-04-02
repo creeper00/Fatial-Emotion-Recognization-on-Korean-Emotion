@@ -12,3 +12,8 @@
 - DAN : 19.53
 - DeepFace: 28.95
 - CNN : 36.94
+
+### Reference
+- https://github.com/yaoing/DAN
+- https://github.com/serengil/deepface
+- https://github.com/justinshenk/fer

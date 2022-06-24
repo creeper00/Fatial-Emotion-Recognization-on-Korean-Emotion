@@ -14,7 +14,7 @@ Classify emotions into 3 labels: Angry/sad, Happy, Suprise
 ### Frontend
 vue code for result visualization
 1. run backend server in colab
-2. set new ip address(colab backend server) to vue websocket config
+2. set new ip address(colab backend server) to websocket config in `frontend/src/component/MainPage.vue`  
 3. run frontend
 4. copy-paste youtube url to frontend form
 5. watch analysis (you should refresh page for next analysis)
